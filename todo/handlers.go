@@ -43,7 +43,7 @@ func GetTodos(c *fiber.Ctx) {
 	c.JSON(todosList)
 }
 
-// GetTodoByID fetches a Todo by ID
+// GetTodoByID fetches a Todo with a matching ID
 func GetTodoByID(c *fiber.Ctx) {
 	id, err := strconv.ParseUint(c.Params("ID"), 10, 64)
 	if err != nil {
